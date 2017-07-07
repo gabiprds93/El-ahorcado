@@ -92,7 +92,6 @@ while(contador < hombre.length)
         break;
     } 
     i++;
-    console.log(i);
 }
     
 if(secreta.join("") != palabraSecreta.join(""))
