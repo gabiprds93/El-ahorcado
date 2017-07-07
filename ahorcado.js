@@ -52,8 +52,8 @@ for(var i = 0; i < palabraSecreta.length; i++)
     secreta.push("*");
 }
 console.log(secreta.join(""));
-
-for(var i = 0; i < 10; i++)
+var i = 1;
+while(contador < hombre.length)
 {
     var bandera = false;
     var bandera1 = true;
@@ -62,7 +62,7 @@ for(var i = 0; i < 10; i++)
         while(caracter.length != 1 || bandera1)
         {
             bandera1 = false;
-            caracter = prompt("Ingresar una sola letra. Intento numero " + (i+1));
+            caracter = prompt("Ingresar una sola letra. Intento numero " + (i));
             for(var l in letras)
             {
                 if(caracter == letras[l])
@@ -70,7 +70,7 @@ for(var i = 0; i < 10; i++)
             }
         }
         letras.push(caracter);
-        console.log("Intento numero " + (i+1))
+        console.log("Intento numero " + (i))
         for(var j in palabraSecreta)
         {
             if(caracter == palabraSecreta[j])
@@ -91,6 +91,8 @@ for(var i = 0; i < 10; i++)
     {
         break;
     } 
+    i++;
+    console.log(i);
 }
     
 if(secreta.join("") != palabraSecreta.join(""))
